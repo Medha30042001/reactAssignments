@@ -20,7 +20,6 @@ function TodoList() {
 
   return (
     <>
-        <h2>Todo List</h2>
         {todos.map(todo => (
             <TodoCard 
                 key = {todo.id} 
