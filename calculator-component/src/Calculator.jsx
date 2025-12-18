@@ -22,7 +22,11 @@ function Calculator() {
     }
 
     // append result
-    setResults([...results, result]);
+    setResults(prev => [...prev, result]);
+
+    setNumA("");
+    setNumB("");
+    setOperation("");
   }
 
   return (
