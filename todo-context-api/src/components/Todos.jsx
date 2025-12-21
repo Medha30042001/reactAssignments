@@ -25,6 +25,6 @@ const Todos = () => {
         <TodoList />
    </TodoContext.Provider>
   );
-}
+} 
 
 export default Todos;
