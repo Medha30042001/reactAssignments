@@ -1,0 +1,124 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: lavender;
+  color: #303030;
+}
+
+.navBar{
+  display: flex;
+  justify-content: space-between;
+  background-color: dimgray;
+  padding: 0 20px;
+}
+.navBar a, .linkBtn{
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 15px 20px;
+  border-radius: 0;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+.navBar a:hover, .linkBtn:hover{
+  color: dimgray;
+  background-color: lavender;
+}
+
+.content{
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+.content form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.formDiv{
+  background-color: #b6a9f3;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 4px 6px 12px rgba(0,0,0,0.1);
+}
+.formDiv h1{
+  font-size: 50px;
+}
+
+input{
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  font-size: 20px;
+}
+input:focus{
+  outline: 2px solid rgb(77, 50, 197);
+}
+
+button{
+  padding: 10px 20px;
+  font-size: 20px;
+  border: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.loginBtn{
+  background-color: #6a46eb;
+  color: white;
+}
+
+.loginBtn:hover{
+  background-color: #f4f7fc;
+  color: #6a46eb;
+}
+
+.todoContainer{
+  margin: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 50px;
+  cursor: pointer;
+}
+
+.todoContainer a{
+  background-color: #b6a9f3;
+  padding: 40px;
+  border-radius: 10px;
+  color: #2d2d2e;
+  text-decoration: none;
+  text-align: center;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 2px 4px 6px rgba(0,0,0,0.1);
+}
+
+.todoContainer a:hover{
+  background-color: #9a89dd;
+  color: white;
+  box-shadow: 4px 6px 12px rgba(0,0,0,0.25);
+}
+
+.todo{
+  display: flex;
+  flex-direction: column;
+  background-color: #b6a9f3;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 2px 4px 6px rgba(0,0,0,0.1);
+}
+
+.home{
+  font-size: 40px;
+  background-color: #b6a9f3;
+  padding: 150px 180px;
+  border-radius: 10px;
+  box-shadow: 2px 4px 6px rgba(0,0,0,0.1);
+}
