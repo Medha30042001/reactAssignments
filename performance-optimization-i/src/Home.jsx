@@ -1,9 +1,7 @@
 import { useCallback, useMemo, useState } from "react";
 import ProductList from "./ProductList";
 
-const Home = () => {
-
-    const products = [
+const products = [
         { id: 1, name: "Phone", price: 500 },
         { id: 2, name: "Laptop", price: 1500 },
         { id: 3, name: "Headphones", price: 200 },
@@ -31,6 +29,8 @@ const Home = () => {
         { id: 25, name: "Mouse", price: 80 },
         
     ]
+
+const Home = () => {
     
     const [count, setCount] = useState(0);
     
@@ -39,6 +39,7 @@ const Home = () => {
     }
 
     const totalPrice = useMemo(() => {
+        console.log("Recalculating total price");
         return products.reduce((sum, product) => (sum + product.price), 0);
     }, [products]);
 
