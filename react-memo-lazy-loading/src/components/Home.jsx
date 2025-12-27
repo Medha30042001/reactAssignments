@@ -1,4 +1,4 @@
-import React, { lazy, useState } from 'react'
+import React, { lazy, Suspense, useState } from 'react'
 // import Child from './Child';
 
 const Child = lazy(() => import('./Child'));
@@ -12,7 +12,10 @@ const Home = () => {
       <h2>Count : {count}</h2>
       <button onClick={() => setCount(c => c + 1)}>Increment Count</button>
 
-      <Child />
+      <Suspense fallback={<h2>Loading...</h2>}>
+        <Child />
+      </Suspense>
+      
     </>
   )
 }
