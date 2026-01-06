@@ -1,77 +1,92 @@
-import { useState } from "react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Button } from "@/components/ui/button"
+import React, { useState } from 'react'
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { Textarea } from '@/components/ui/textarea';
 
-export default function FeedbackForm() {
+const FeedbackForm = () => {
+
   const [form, setForm] = useState({
-    name: "",
-    email: "",
-    feedback: "",
-  })
-
-  const [submitted, setSubmitted] = useState(null)
+    nam:'',
+    email:'',
+    feedback:''
+  });
+  const [note, setNote] = useState(null)
 
   const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value })
+     const {name, value} = e.target;
+     setForm({...form, [name]:value})
   }
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    setSubmitted(form)
-    setForm({ name: "", email: "", feedback: "" })
-  }
+    e.preventDefault();
+
+    setNote(form);
+
+    setForm({
+      nam:'',
+      email:'',
+      feedback:''
+    })
+  };    
 
   return (
-    <div className="max-w-md mx-auto mt-10 space-y-6">
+  
+    <div class='max-w-md mx-auto mt-10 space-y-6'>
       <Card>
         <CardHeader>
           <CardTitle>Feedback Form</CardTitle>
         </CardHeader>
         <CardContent>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <Input
-              name="name"
-              placeholder="Your name"
-              value={form.name}
-              onChange={handleChange}
-              required
-            />
-            <Input
-              name="email"
-              type="email"
-              placeholder="Your email"
-              value={form.email}
-              onChange={handleChange}
-              required
-            />
+          <form onSubmit={handleSubmit} class='space-y-4'>
+            <Input type='text'
+            name='nam'
+            placeholder='Enter your Name'
+            value={form.nam}
+            onChange={handleChange}
+            required />
+
+            <Input type='email'
+            name='email'
+            placeholder='Enter your Email'
+            value={form.email}
+            onChange={handleChange}
+            required />
+
             <Textarea
-              name="feedback"
-              placeholder="Your feedback"
-              value={form.feedback}
-              onChange={handleChange}
-              required
-            />
-            <Button type="submit" className="w-full">
-              Submit
-            </Button>
+            name='feedback'
+            placeholder='Give Feedback'
+            value={form.feedback}
+            onChange={handleChange}
+            required />
+
+            <Button type='submit'>Submit</Button>
           </form>
         </CardContent>
       </Card>
-
-      {submitted && (
-        <Card>
-          <CardHeader>
-            <CardTitle>Submitted Feedback</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-2 text-sm">
-            <p><strong>Name:</strong> {submitted.name}</p>
-            <p><strong>Email:</strong> {submitted.email}</p>
-            <p><strong>Feedback:</strong> {submitted.feedback}</p>
-          </CardContent>
-        </Card>
+   
+  
+      {note && (
+          <Card>
+            <CardHeader>
+              <CardTitle>Feedback</CardTitle>
+            </CardHeader>
+            <CardContent class='space-y-2 text-sm px-7'>
+              <p><strong>Name:</strong> {note.nam}</p>
+              <p><strong>Email:</strong> {note.email}</p>
+              <p><strong>Feedback:</strong> {note.feedback}</p>
+            </CardContent>
+          </Card>
       )}
-    </div>
+       </div>
+
   )
 }
+
+export default FeedbackForm
+
