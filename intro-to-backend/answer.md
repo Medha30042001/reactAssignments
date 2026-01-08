@@ -31,7 +31,7 @@ A web application that is divided into 3 layers is called 3 tier architecture. A
 (ii) The application/business layer is the backend layer, because it contains the business logic. It processes the client requests and accesses the database.
 (iii) The data layer handles the storage of data. The user can store, and retrieve data from here, and technologies like MySQL, MongoDB are used. Even database as a service, like Firebase can be used.
 
-![Three-Tier Architecture](images/3tier.webp)
+![Three-Tier Architecture](images/3tier.png)
 
 
 Q6. JavaScript as a Backend Language
