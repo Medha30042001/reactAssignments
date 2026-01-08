@@ -3,7 +3,7 @@ In a web application, the Frontend (FE) is the part that the users of that appli
 Frontend includes user interface like buttons, text, images, etc. It takes care of the responsiveness for different sized screens. The user can click these buttons and give inputs and see different pages.This is how the user interacts with the pages.
 This input and interaction is communicated with the backend. Like during signup, the credentials need to be sent to the server.
 
-
+![Frontend vs backend](images/FrontendvsBackend.png)
 
 
 Q2. Role of Backend (BE)
@@ -23,12 +23,15 @@ The client is the user side system of the web application. It includes the web b
 The server is the system that receives and sends requests to and from the client system. It holds the business logic and has access to the database.
 The client sends a request to the server => the server processes the request => the server sends a response to the client => the client displays the result to the user
 
+![Client Server Model](images/ClientServer.png)
 
 Q5. Three-Tier Architecture
 A web application that is divided into 3 layers is called 3 tier architecture. All the major web applications use this style of organization, because it improves maintenance, and it is easy to scale. Changes in one layer won’t affect the other layers.
 (i) The presentation layer is the frontend, which handles all the user interaction and the design aspect. 
 (ii) The application/business layer is the backend layer, because it contains the business logic. It processes the client requests and accesses the database.
 (iii) The data layer handles the storage of data. The user can store, and retrieve data from here, and technologies like MySQL, MongoDB are used. Even database as a service, like Firebase can be used.
+
+![Three-Tier Architecture](images/3tier.webp)
 
 
 Q6. JavaScript as a Backend Language
