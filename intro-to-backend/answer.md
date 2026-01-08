@@ -3,7 +3,7 @@ In a web application, the Frontend (FE) is the part that the users of that appli
 Frontend includes user interface like buttons, text, images, etc. It takes care of the responsiveness for different sized screens. The user can click these buttons and give inputs and see different pages.This is how the user interacts with the pages.
 This input and interaction is communicated with the backend. Like during signup, the credentials need to be sent to the server.
 
-![Frontend vs backend](images/FrontendvsBackend.png)
+![Frontend vs backend](images/FrontendvsBackend.jpg)
 
 
 Q2. Role of Backend (BE)
